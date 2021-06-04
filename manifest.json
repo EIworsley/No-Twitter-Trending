@@ -1,0 +1,12 @@
+{
+  "name": "No Twitter Trending",
+  "description": "Hides the trending section",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://*.twitter.com/*"],
+      "css": ["hide-trending.css"]
+    }
+  ]
+}
