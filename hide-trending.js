@@ -1,4 +1,4 @@
-// debugger;
+console.log("In hide-trending.js");
 let intervalId = setInterval(
   () => {
     let el = document.querySelector("div[aria-label='Timeline: Trending now']")

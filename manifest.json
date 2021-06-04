@@ -6,12 +6,13 @@
   "content_scripts": [
     {
       "matches": ["https://*.twitter.com/*"],
-      "css": ["hide-trending.css"],
-      "js": ["hide-trending.js"]
+      "css": ["hide-trending.css"]
     }
   ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
-    "default_popup": "pop-up.html",
     "default_icon": {
       "16": "/images/get_started16.png",
       "32": "/images/get_started32.png",
@@ -19,6 +20,8 @@
       "128": "/images/get_started128.png"
     }
   },
+  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+  "host_permissions": ["https://*.twitter.com/"],
   "icons": {
     "16": "/images/get_started16.png",
     "32": "/images/get_started32.png",
