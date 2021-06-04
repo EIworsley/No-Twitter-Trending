@@ -1,3 +1,13 @@
+// debugger;
+let intervalId = setInterval(
+  () => {
+    let el = document.querySelector("div[aria-label='Timeline: Trending now']")
+    if (el) {
+      el.setAttribute("style", "display: none;")
+      clearInterval(intervalId)
+    }
+  },
+  100
+)
 
-let el = document.querySelector("div[aria-label='Timeline: Trending now']")
-el.setAttribute("style", "display: none;")
+
